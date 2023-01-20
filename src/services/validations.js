@@ -6,4 +6,3 @@ const isLongEnough = (label) => label.length >= 8;
 
 exports.isEmpty = isEmpty;
 exports.isLongEnough = isLongEnough;
-

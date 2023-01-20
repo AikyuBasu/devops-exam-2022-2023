@@ -34,5 +34,4 @@ describe("validations tests suites - gamertag is at least 8char long", () => {
         const result = isLongEnough("gamer1");
         expect(result).toBe(false);
     });
-
 });
