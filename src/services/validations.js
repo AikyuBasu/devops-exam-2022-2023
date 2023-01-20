@@ -9,6 +9,9 @@ const containsSpecialChar = (label) => {
     return specialChars.test(label);
 };
 
+const containsDigit = (label) => /\d/.test(label);
+
 exports.isEmpty = isEmpty;
 exports.isLongEnough = isLongEnough;
 exports.containsSpecialChar = containsSpecialChar;
+exports.containsDigit = containsDigit;
