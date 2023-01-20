@@ -2,6 +2,7 @@ const {
     isEmpty,
     isLongEnough,
     containsSpecialChar,
+    containsDigit,
 } = require("../validations");
 
 describe("validations tests suites - isEmpty", () => {
@@ -46,6 +47,18 @@ describe("validations tests suites - gamertag contains a special char", () => {
 
     test("should return false as the label doesn't contain a special char", () => {
         const result = containsSpecialChar("gamer1");
+        expect(result).toBe(false);
+    });
+});
+
+describe("validations tests suites - gamertag contains a digit", () => {
+    test("should return true as the label contains a digit", () => {
+        const result = containsDigit("gamerOne12");
+        expect(result).toBe(true);
+    });
+
+    test("should return false as the label doesn't contain no digit", () => {
+        const result = containsDigit("gamerOneAndOnly");
         expect(result).toBe(false);
     });
 });
